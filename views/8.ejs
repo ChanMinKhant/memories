@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Regular Expression</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function check_name(){
+			var name=document.f1.t1.value;
+			var e=/(U|Daw)\s[A-Za-z]{2,}/;
+			if (e.test(name)) {
+				alert("Valid Name");
+			}
+			else
+			{
+				alert("Invalid Name");
+				}
+		}
+	</script>
+	<form name="f1" onsubmit="return check_name()">
+		User Name :<input type="text" name="t1">
+		<input type="submit" name="b1">
+	</form>
+</body>
+</html>

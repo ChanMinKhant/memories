@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var colors=[];
+		colors.push("red","green");
+		var c=colors.unshift("blue","brown","violet");
+		alert(c);
+		colors.shift();
+		colors.pop();
+		alert(colors);
+		var num=[1,2,3,4,5,4,3,2,1];
+	var someResult=num.some(function(item,index,array){
+			return (item>2);
+		});
+		if(someResult){
+			alert("Some items are greater than 2");
+		}
+		else{
+			alert("No, item is greater than 2");
+		}
+	var filterResult=num.filter(function(item,index,array){
+		return (item>3);
+	});
+	var mapResult=num.map(function(item,index,array){
+		return (items*10);
+	});
+	alert(mapResult);
+	function factorial(num){
+		if (num<=1) {
+			return 1;
+		}
+		else{
+			return num*factorial(num-1);
+		}
+	}
+	alert(factorial(5));
+	function Car(seats,engine,theradio){
+		var o=new Object();
+		o.seats=seats;
+		o.engine=engine;
+		o.theradio=theradio;
+		o.sayCar=function(){
+			alert(o.seats+o.engine+o.theradio);
+		};
+		return o;
+	}
+	var c1=Car("cloth","V-6","Tape Deck");
+	var c2=Car("leather","V-8","CD Player");
+	c1.sayCar();
+	c2.sayCar();
+	</script>
+</body>
+</html>
