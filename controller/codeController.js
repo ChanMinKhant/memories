@@ -11,6 +11,6 @@ exports.getCode = (req, res) => {
       return;
     }
     res.set('Content-Type', 'text/plain')
-    res.send(data);
+      res.send(data);
   });
 }
